@@ -81,6 +81,7 @@ public:
 		num_buckets = (1 << depth);
 		for (int i = 0; i < (1 << depth); i++) {
 			directory.push_back(new Bucket);
+			directory[i]->local_depth = depth;
 			created.push_back(i);
 		}
 	}
